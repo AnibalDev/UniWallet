@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E2048F912BFF9AAC0031C220 /* FacultativaUniWalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2048F902BFF9AAC0031C220 /* FacultativaUniWalletApp.swift */; };
+		E2048F932BFF9AAC0031C220 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2048F922BFF9AAC0031C220 /* ContentView.swift */; };
+		E2048F952BFF9AAD0031C220 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2048F942BFF9AAD0031C220 /* Assets.xcassets */; };
+		E2048F982BFF9AAD0031C220 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2048F972BFF9AAD0031C220 /* Preview Assets.xcassets */; };
+		E2048FA22BFF9AAD0031C220 /* FacultativaUniWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2048FA12BFF9AAD0031C220 /* FacultativaUniWalletTests.swift */; };
+		E2048FAC2BFF9AAD0031C220 /* FacultativaUniWalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2048FAB2BFF9AAD0031C220 /* FacultativaUniWalletUITests.swift */; };
+		E2048FAE2BFF9AAD0031C220 /* FacultativaUniWalletUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2048FAD2BFF9AAD0031C220 /* FacultativaUniWalletUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E2048F9E2BFF9AAD0031C220 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2048F852BFF9AAC0031C220 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2048F8C2BFF9AAC0031C220;
+			remoteInfo = FacultativaUniWallet;
+		};
+		E2048FA82BFF9AAD0031C220 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2048F852BFF9AAC0031C220 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2048F8C2BFF9AAC0031C220;
+			remoteInfo = FacultativaUniWallet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E2048F8D2BFF9AAC0031C220 /* FacultativaUniWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacultativaUniWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2048F902BFF9AAC0031C220 /* FacultativaUniWalletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultativaUniWalletApp.swift; sourceTree = "<group>"; };
+		E2048F922BFF9AAC0031C220 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E2048F942BFF9AAD0031C220 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E2048F972BFF9AAD0031C220 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E2048F9D2BFF9AAD0031C220 /* FacultativaUniWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacultativaUniWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2048FA12BFF9AAD0031C220 /* FacultativaUniWalletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultativaUniWalletTests.swift; sourceTree = "<group>"; };
+		E2048FA72BFF9AAD0031C220 /* FacultativaUniWalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacultativaUniWalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2048FAB2BFF9AAD0031C220 /* FacultativaUniWalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultativaUniWalletUITests.swift; sourceTree = "<group>"; };
+		E2048FAD2BFF9AAD0031C220 /* FacultativaUniWalletUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultativaUniWalletUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2048F8A2BFF9AAC0031C220 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2048F9A2BFF9AAD0031C220 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2048FA42BFF9AAD0031C220 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E2048F842BFF9AAC0031C220 = {
+			isa = PBXGroup;
+			children = (
+				E2048F8F2BFF9AAC0031C220 /* FacultativaUniWallet */,
+				E2048FA02BFF9AAD0031C220 /* FacultativaUniWalletTests */,
+				E2048FAA2BFF9AAD0031C220 /* FacultativaUniWalletUITests */,
+				E2048F8E2BFF9AAC0031C220 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E2048F8E2BFF9AAC0031C220 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2048F8D2BFF9AAC0031C220 /* FacultativaUniWallet.app */,
+				E2048F9D2BFF9AAD0031C220 /* FacultativaUniWalletTests.xctest */,
+				E2048FA72BFF9AAD0031C220 /* FacultativaUniWalletUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2048F8F2BFF9AAC0031C220 /* FacultativaUniWallet */ = {
+			isa = PBXGroup;
+			children = (
+				E2048F902BFF9AAC0031C220 /* FacultativaUniWalletApp.swift */,
+				E2048F922BFF9AAC0031C220 /* ContentView.swift */,
+				E2048F942BFF9AAD0031C220 /* Assets.xcassets */,
+				E2048F962BFF9AAD0031C220 /* Preview Content */,
+			);
+			path = FacultativaUniWallet;
+			sourceTree = "<group>";
+		};
+		E2048F962BFF9AAD0031C220 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E2048F972BFF9AAD0031C220 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E2048FA02BFF9AAD0031C220 /* FacultativaUniWalletTests */ = {
+			isa = PBXGroup;
+			children = (
+				E2048FA12BFF9AAD0031C220 /* FacultativaUniWalletTests.swift */,
+			);
+			path = FacultativaUniWalletTests;
+			sourceTree = "<group>";
+		};
+		E2048FAA2BFF9AAD0031C220 /* FacultativaUniWalletUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E2048FAB2BFF9AAD0031C220 /* FacultativaUniWalletUITests.swift */,
+				E2048FAD2BFF9AAD0031C220 /* FacultativaUniWalletUITestsLaunchTests.swift */,
+			);
+			path = FacultativaUniWalletUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E2048F8C2BFF9AAC0031C220 /* FacultativaUniWallet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2048FB12BFF9AAD0031C220 /* Build configuration list for PBXNativeTarget "FacultativaUniWallet" */;
+			buildPhases = (
+				E2048F892BFF9AAC0031C220 /* Sources */,
+				E2048F8A2BFF9AAC0031C220 /* Frameworks */,
+				E2048F8B2BFF9AAC0031C220 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FacultativaUniWallet;
+			productName = FacultativaUniWallet;
+			productReference = E2048F8D2BFF9AAC0031C220 /* FacultativaUniWallet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E2048F9C2BFF9AAD0031C220 /* FacultativaUniWalletTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2048FB42BFF9AAD0031C220 /* Build configuration list for PBXNativeTarget "FacultativaUniWalletTests" */;
+			buildPhases = (
+				E2048F992BFF9AAD0031C220 /* Sources */,
+				E2048F9A2BFF9AAD0031C220 /* Frameworks */,
+				E2048F9B2BFF9AAD0031C220 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2048F9F2BFF9AAD0031C220 /* PBXTargetDependency */,
+			);
+			name = FacultativaUniWalletTests;
+			productName = FacultativaUniWalletTests;
+			productReference = E2048F9D2BFF9AAD0031C220 /* FacultativaUniWalletTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E2048FA62BFF9AAD0031C220 /* FacultativaUniWalletUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2048FB72BFF9AAD0031C220 /* Build configuration list for PBXNativeTarget "FacultativaUniWalletUITests" */;
+			buildPhases = (
+				E2048FA32BFF9AAD0031C220 /* Sources */,
+				E2048FA42BFF9AAD0031C220 /* Frameworks */,
+				E2048FA52BFF9AAD0031C220 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2048FA92BFF9AAD0031C220 /* PBXTargetDependency */,
+			);
+			name = FacultativaUniWalletUITests;
+			productName = FacultativaUniWalletUITests;
+			productReference = E2048FA72BFF9AAD0031C220 /* FacultativaUniWalletUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E2048F852BFF9AAC0031C220 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					E2048F8C2BFF9AAC0031C220 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					E2048F9C2BFF9AAD0031C220 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = E2048F8C2BFF9AAC0031C220;
+					};
+					E2048FA62BFF9AAD0031C220 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = E2048F8C2BFF9AAC0031C220;
+					};
+				};
+			};
+			buildConfigurationList = E2048F882BFF9AAC0031C220 /* Build configuration list for PBXProject "FacultativaUniWallet" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E2048F842BFF9AAC0031C220;
+			productRefGroup = E2048F8E2BFF9AAC0031C220 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E2048F8C2BFF9AAC0031C220 /* FacultativaUniWallet */,
+				E2048F9C2BFF9AAD0031C220 /* FacultativaUniWalletTests */,
+				E2048FA62BFF9AAD0031C220 /* FacultativaUniWalletUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E2048F8B2BFF9AAC0031C220 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2048F982BFF9AAD0031C220 /* Preview Assets.xcassets in Resources */,
+				E2048F952BFF9AAD0031C220 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2048F9B2BFF9AAD0031C220 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2048FA52BFF9AAD0031C220 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E2048F892BFF9AAC0031C220 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2048F932BFF9AAC0031C220 /* ContentView.swift in Sources */,
+				E2048F912BFF9AAC0031C220 /* FacultativaUniWalletApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2048F992BFF9AAD0031C220 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2048FA22BFF9AAD0031C220 /* FacultativaUniWalletTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2048FA32BFF9AAD0031C220 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2048FAC2BFF9AAD0031C220 /* FacultativaUniWalletUITests.swift in Sources */,
+				E2048FAE2BFF9AAD0031C220 /* FacultativaUniWalletUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E2048F9F2BFF9AAD0031C220 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2048F8C2BFF9AAC0031C220 /* FacultativaUniWallet */;
+			targetProxy = E2048F9E2BFF9AAD0031C220 /* PBXContainerItemProxy */;
+		};
+		E2048FA92BFF9AAD0031C220 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2048F8C2BFF9AAC0031C220 /* FacultativaUniWallet */;
+			targetProxy = E2048FA82BFF9AAD0031C220 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E2048FAF2BFF9AAD0031C220 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E2048FB02BFF9AAD0031C220 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E2048FB22BFF9AAD0031C220 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FacultativaUniWallet/Preview Content\"";
+				DEVELOPMENT_TEAM = 55UABBR7FF;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anibaldev.FacultativaUniWallet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E2048FB32BFF9AAD0031C220 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FacultativaUniWallet/Preview Content\"";
+				DEVELOPMENT_TEAM = 55UABBR7FF;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anibaldev.FacultativaUniWallet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E2048FB52BFF9AAD0031C220 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 55UABBR7FF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anibaldev.FacultativaUniWalletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FacultativaUniWallet.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FacultativaUniWallet";
+			};
+			name = Debug;
+		};
+		E2048FB62BFF9AAD0031C220 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 55UABBR7FF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anibaldev.FacultativaUniWalletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FacultativaUniWallet.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FacultativaUniWallet";
+			};
+			name = Release;
+		};
+		E2048FB82BFF9AAD0031C220 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 55UABBR7FF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anibaldev.FacultativaUniWalletUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FacultativaUniWallet;
+			};
+			name = Debug;
+		};
+		E2048FB92BFF9AAD0031C220 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 55UABBR7FF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anibaldev.FacultativaUniWalletUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FacultativaUniWallet;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E2048F882BFF9AAC0031C220 /* Build configuration list for PBXProject "FacultativaUniWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2048FAF2BFF9AAD0031C220 /* Debug */,
+				E2048FB02BFF9AAD0031C220 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2048FB12BFF9AAD0031C220 /* Build configuration list for PBXNativeTarget "FacultativaUniWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2048FB22BFF9AAD0031C220 /* Debug */,
+				E2048FB32BFF9AAD0031C220 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2048FB42BFF9AAD0031C220 /* Build configuration list for PBXNativeTarget "FacultativaUniWalletTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2048FB52BFF9AAD0031C220 /* Debug */,
+				E2048FB62BFF9AAD0031C220 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2048FB72BFF9AAD0031C220 /* Build configuration list for PBXNativeTarget "FacultativaUniWalletUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2048FB82BFF9AAD0031C220 /* Debug */,
+				E2048FB92BFF9AAD0031C220 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E2048F852BFF9AAC0031C220 /* Project object */;
+}
