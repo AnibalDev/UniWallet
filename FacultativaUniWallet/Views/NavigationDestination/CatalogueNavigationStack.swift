@@ -9,44 +9,65 @@ import SwiftUI
 
 struct CatalogueNavigationStack: View {
     
-    @State var selectedType: Int = 0
-    @State var listaCatalogo: [CuentaAgendadaModel] = []
-    
-    var cuentasAgendadas = [
-        CuentaAgendadaModel(
-            cuenta: CuentaModel(name: "test1", monto: 1500, nextPay: fmt.date(from: "2024-06-01T00:00:00+0000")!, tipo: .ingreso),
-            intervalDays: 30),
-        CuentaAgendadaModel(
-            cuenta: CuentaModel(name: "test2", monto: 1500, nextPay: fmt.date(from: "2024-06-05T00:00:00+0000")!, tipo: .egreso),
-            intervalDays: 30),
-        CuentaAgendadaModel(
-            cuenta: CuentaModel(name: "test3", monto: 1500, nextPay: fmt.date(from: "2024-06-09T00:00:00+0000")!, tipo: .ingreso),
-            intervalDays: 30),
-    ]
-    
-    var cuentasFiltradas: [CuentaAgendadaModel] {
-        var type = selectedType == 0 ? CategoriaCuentaEnum.ingreso : CategoriaCuentaEnum.egreso
-        return cuentasAgendadas.filter({$0.cuenta.tipo == type})
-    }
+    @ObservedObject var vm = CatalogueViewModel()
     
     var body: some View {
         NavigationStack {
             Divider()
-            Picker("Seleccione la naturaleza de la cuenta", selection: $selectedType) {
+            Picker("Seleccione la naturaleza de la cuenta", selection: $vm.selectedType) {
                 Text("Activos").tag(0)
-                Text("Pasivos").tag(2)
+                Text("Pasivos").tag(1)
             }
             .padding()
             .pickerStyle(.segmented)
-            List(cuentasFiltradas) { cuenta in
+            List(vm.cuentasFiltradas) { cuenta in
                 HStack {
-                    Text(cuenta.cuenta.name)
-                        .bold()
-//                    Text(String(cuenta.))
+                    VStack {
+                        LabeledContent {
+                            Text(cuenta.cuenta.name.uppercased())
+                        } label: {
+                            Text("Titulo")
+                                .bold()
+                        }
+                        LabeledContent {
+                            Text(String(cuenta.intervalDays))
+                        } label: {
+                            Text("Intervalo")
+                                .bold()
+                        }
+                        LabeledContent {
+                            Text(cuenta.cuenta.category.uppercased())
+                        } label: {
+                            Text("Categoría")
+                                .bold()
+                        }
+                        LabeledContent {
+                            Text(cuenta.cuenta.monto, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                                .foregroundStyle(cuenta.cuenta.tipoCuenta == "ingreso" ? .green : .red)
+                        } label: {
+                            Text("Monto")
+                                .bold()
+                        }
+                    }
+                    .padding([.trailing], 20)
+                    VStack{
+                        Button {
+                        } label: {
+                            Image(systemName: "gear")
+                        }
+                        .buttonStyle(.bordered)
+                        Button {
+                        } label: {
+                            Image(systemName: "trash.fill")
+                                .foregroundStyle(.red)
+                        }
+                        .buttonStyle(.bordered)
+                    }
                 }
+                .padding(4)
                 
             }
-            .navigationTitle("Catalogo de cuentas")
+                .navigationTitle("Catalogo de cuentas")
         }
     }
 }

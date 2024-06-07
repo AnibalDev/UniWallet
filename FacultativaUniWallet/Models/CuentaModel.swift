@@ -8,29 +8,39 @@
 import Foundation
 
 
-
-
-struct CuentaModel: Identifiable {
-    let id = UUID()
+struct CuentaModel: Identifiable, Codable {
+    var id = UUID()
     let name: String
-    let monto: Int
-    let fechaPago: Date
-    let tipo: CategoriaCuenta
-}
-
-struct CuentaAgendadaModel: Identifiable {
-    let id = UUID()
-    let cuenta: CuentaModel
-    let intervalDays: Int
-    var lastPay: Date
+    let monto: Decimal
+    let description: String
+    let tipoCuenta: String
+    let category: String
+    let owner: String
     
-    private func formatNumberToThousand() -> String {
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .decimal
-        numberFormatter.groupingSeparator = "."
-        let formattedNumber = numberFormatter.string(from: NSNumber(value: cuenta.monto))
-        return formattedNumber ?? ""
+    init(data: [String: Any]) {
+        name = data["name"] as! String
+        monto = Decimal(string: data["monto"] as! String)!
+        tipoCuenta = data["tipoCuenta"] as! String
+        category = data["category"] as! String
+        description = data["description"] as! String
+        owner = data["owner"] as! String
+    }
+    init(name: String, monto: Decimal, tipoCuenta: String, category: String, owner: String, description: String) {
+        self.name = name
+        self.monto = monto
+        self.tipoCuenta = tipoCuenta
+        self.description = description
+        self.category = category
+        self.owner = owner
+    }
+    func toDictionary() -> [String: Any] {
+        return [
+            "name": name,
+            "monto": String(describing: monto),
+            "tipoCuenta": tipoCuenta,
+            "category":  category,
+            "description": description,
+            "owner": owner,
+        ]
     }
 }
-
-

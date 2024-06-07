@@ -22,10 +22,27 @@ final class FacultativaUniWalletUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    func testLogIn() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
+        let sugDynamicsSgCard = app.buttons["loginButton"]
+          XCTAssertTrue(sugDynamicsSgCard.exists)
+          sugDynamicsSgCard.tap()
+        
+        let emailText = app.textFields["email"]
+                XCTAssertTrue(emailText.waitForExistence(timeout: 1))
+                emailText.tap()
+                emailText.typeText("anibalrodriguezdeveloper@gmail.com")
+        
+        let passwordText = app.secureTextFields["password"]
+                XCTAssertTrue(passwordText.waitForExistence(timeout: 1))
+                passwordText.tap()
+                passwordText.typeText("Password123*")
+        
+        let signInButton = app.buttons["signIn"]
+          XCTAssertTrue(signInButton.exists)
+          signInButton.tap()
 
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }

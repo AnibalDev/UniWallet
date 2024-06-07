@@ -8,17 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var selectedTab: AppScreen? = .found
+    @EnvironmentObject var authManager: LoginViewModel
+    init() {
+        var db: CuentasConnection = CuentasConnection.shared
+    }
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        if authManager.authState == .signedOut {
+           LoginView()
         }
-        .padding()
+        else {
+            TabNavigatorView(selection: $selectedTab)
+        }
+        
     }
 }
-
-#Preview {
-    ContentView()
-}
+//
+//#Preview {
+//    ContentView()
+//}

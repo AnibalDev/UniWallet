@@ -8,11 +8,29 @@
 import SwiftUI
 
 struct CustomButtonFill: View {
+    var buttonCallback: () -> Void
+    let text: String
+    let width: CGFloat
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button {
+            buttonCallback()
+        } label: {
+            Text(text)
+                .padding()
+                .bold()
+//                .frame(maxWidth: width)
+                .foregroundColor(.white)
+                .background(
+                    RoundedRectangle(
+                        cornerRadius: 12
+                    )
+                    .fill(.pink)
+                )
+        }
     }
 }
 
 #Preview {
-    CustomButtonFill()
+    CustomButtonFill(buttonCallback: {}, text: "Test", width: 400)
 }

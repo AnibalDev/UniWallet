@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct FondosDateFilter: View {
+    
+    @State var date = Date()
+    @Binding var selectedRange: Int
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Picker("What is your favorite color?", selection: $selectedRange) {
+                Text("7D").tag(7)
+                Text("15D").tag(15)
+                Text("1M").tag(30)
+            }
+            .pickerStyle(.segmented)
+        }
     }
 }
 
-#Preview {
-    FondosDateFilter()
-}
+
+//#Preview {
+//    @State var selectedRange = 0
+//    FondosDateFilter( selectedRange: $selectedRange)
+//}

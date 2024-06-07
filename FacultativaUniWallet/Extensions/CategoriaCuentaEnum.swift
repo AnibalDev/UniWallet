@@ -7,7 +7,7 @@
 
 import Foundation
 
-//enum Categoria {
-//    case ingreso, egreso
-//    var id: Self {self}
-//}
+enum CategoriaIngresoEnum {
+    case ingreso, egreso
+    var id: Self {self}
+}

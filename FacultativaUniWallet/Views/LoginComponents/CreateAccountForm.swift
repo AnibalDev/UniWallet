@@ -11,8 +11,41 @@ struct CreateAccountForm: View {
     @State var email = ""
     @State var password = ""
     @State var repeatPassword = ""
+    @State private var showingAlert = false
     
-    var buttonCallback: (String, String) -> Void
+    @State var errorMessage = ""
+    
+    var loginCallback: () -> Void
+    
+    @EnvironmentObject var vm: LoginViewModel
+    
+    func createAccount() {
+        if(!isValidEmail(email)) {
+            errorMessage = "Correo invalido"
+            showingAlert.toggle()
+        }
+        else if(!isValidPassword(password)){
+            errorMessage = "Contraseña no segura"
+            showingAlert.toggle()
+        }
+        else if(password != repeatPassword) {
+            errorMessage = "Las contraseñas no coinciden"
+            showingAlert.toggle()
+        }
+        else {
+            Task {
+                do {
+                    try await vm.createAccount(email: email, password: password)
+                }
+                catch {
+                    print("Error: \(error)")
+                }
+            }
+        }
+        
+        
+    }
+    
     
     var body: some View {
         VStack {
@@ -23,23 +56,26 @@ struct CreateAccountForm: View {
             Text("Usuario")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .font(.callout)
-            CustomTextField(value: $email, text: "Email")
+            EmailTextField(value: $email)
             Text("Contraseña")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .font(.callout)
-            CustomSecureField(value: $password, label: "Contraseña")
-            CustomSecureField(value: $repeatPassword, label: "Repetir contraseña")
+            PasswordTextField(text: $password, title: "Contraseña")
+            PasswordTextField(text: $repeatPassword, title: "Repetir contraseña")
             
-            CustomButtonFill(buttonCallback: { buttonCallback(email, password) }, text: "Registrarse ", width: screenWidth - 50)
-            
+            CustomButtonFill(buttonCallback: createAccount, text: "Registrarse", width: screenWidth - 50)
                 .padding(8)
             
             HStack {
                 Text("Ya tienes una cuenta?")
                 Button("Ingresar sesión") {
+                    loginCallback()
                 }
                 .foregroundStyle(.pink)
             }
+        }
+        .alert(isPresented: $showingAlert) {
+            Alert(title: Text("Error de credenciales"), message: Text(errorMessage), dismissButton: .default(Text("Ok")))
         }
         .padding()
         .background(

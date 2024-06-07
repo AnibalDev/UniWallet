@@ -10,80 +10,76 @@ import Foundation
 class FoundViewModel: Identifiable, ObservableObject {
     
     let id = UUID()
-    
-    @Published var searchText = ""
-    @Published var selectedFilder = 0
+    @Published var db: CuentasConnection = CuentasConnection.shared
+   
     @Published var showingSaltarAlert = false
-    @Published var disponible: Int = 0
+    @Published var fondosInsuficientesAlert = false
     @Published var sheetPresented = false
     
-    var cuentas: [CuentaAgendadaModel] {
-        return searchText.isEmpty ? cuentasAgendadas : cuentasAgendadas.filter({$0.cuenta.name.localizedStandardContains(searchText)})
-    }
+//    var cuentas: [CuentaAgendadaModel] {
+//        return searchText.isEmpty ? db.cuentasAgendadas : db.cuentasAgendadas.filter({$0.cuenta.name.localizedStandardContains(searchText)})
+//    }
     init() {
-       disponible = calcularDisponible()
+        //            disponible = calcularDisponible()
     }
     
-    func calcularDisponible() -> Int {
-        let positive = historialIngresos.reduce(0, {$0 + $1.monto})
-        let negative = historialEgresos.reduce(0, {$0 + $1.monto})
-        
-        return positive - negative
-    }
-    
-    
-    @Published var historialCuentas: [CuentaModel] = [
-        CuentaModel(name: "Test", monto: 1000, nextPay: Date(), tipo: .ingreso),
-        CuentaModel(name: "Test", monto: 1000, nextPay: Date(), tipo: .ingreso),
-        CuentaModel(name: "Test", monto: 1000, nextPay: Date(), tipo: .ingreso),
-    ]
     func agregarCuentaAgendada(cuentaAgendada: CuentaAgendadaModel) {
-        cuentasAgendadas.append(cuentaAgendada)
+        db.insertCuentaAgendada(data: cuentaAgendada)
         sheetPresented.toggle()
+        
     }
-    
-    @Published var cuentasAgendadas = [
-        CuentaAgendadaModel(
-            cuenta: CuentaModel(name: "test1", monto: 1500, nextPay: fmt.date(from: "2024-06-01T00:00:00+0000")!, tipo: .ingreso),
-            intervalDays: 30),
-        CuentaAgendadaModel(
-            cuenta: CuentaModel(name: "test2", monto: 1500, nextPay: fmt.date(from: "2024-06-05T00:00:00+0000")!, tipo: .egreso),
-            intervalDays: 30),
-        CuentaAgendadaModel(
-            cuenta: CuentaModel(name: "test3", monto: 1500, nextPay: fmt.date(from: "2024-06-09T00:00:00+0000")!, tipo: .ingreso),
-            intervalDays: 30),
-    ]
-    var actualID: UUID? = nil
-    
-    func saltarCuentaAgendada(idCuenta: UUID) {
-        showingSaltarAlert.toggle()
-        actualID = idCuenta
-    }
-    
-    func saltarActualId() {
-        if let row = self.cuentasAgendadas.firstIndex(where: {$0.id == actualID!}) {
-            cuentasAgendadas[row].pagar()
-        }
-    }
-    
-    
-    func pagarCuentaAgendada(idCuenta: UUID) {
-        if let row = self.cuentasAgendadas.firstIndex(where: {$0.id == idCuenta}) {
+    func agregarCuenta(cuenta: CuentaModel) {
+        if(cuenta.tipoCuenta == "egreso" && db.disponible - cuenta.monto < 0) {
+            sheetPresented.toggle()
             
-            historialCuentas.append(cuentasAgendadas[row].cuenta)
-            cuentasAgendadas[row].pagar()
+            Task {
+                try await Task.sleep(nanoseconds: 1_000_000_000)
+                fondosInsuficientesAlert = true
+            }
         }
-        disponible = calcularDisponible()
-        print(disponible)
+        else
+        {
+            db.insertarCuenta(data: cuenta)
+            sheetPresented.toggle()
+        }
+        
+        db.refreshCuentas()
     }
     
     
-    var historialIngresos: [CuentaModel] {
-        return historialCuentas.filter({ $0.tipo == .ingreso })
+    var cuentaTemporal: CuentaAgendadaModel?
+    func saltarCuentaAgendada(cuenta: CuentaAgendadaModel) {
+        showingSaltarAlert = true
+        cuentaTemporal = cuenta
+    }
+    func saltarAlert()
+    {
+        if let cuenta = cuentaTemporal {
+            db.updateCuentaAgendada(collection: "cuentasAgendadas", uid: cuenta.uid, modify: ["nextPay": fmt.string(from: cuenta.newDate())])
+        }
+        db.refreshCuentas()
+        print()
     }
     
-    var historialEgresos: [CuentaModel] {
-        return historialCuentas.filter({ $0.tipo == .egreso })
+    func pagarCuentaAgendada(cuenta: CuentaAgendadaModel) {
+        if(cuenta.cuenta.tipoCuenta == "egreso" && db.disponible - cuenta.cuenta.monto < 0) {
+            sheetPresented.toggle()
+            
+            Task {
+                try await Task.sleep(nanoseconds: 1_000_000_000)
+                fondosInsuficientesAlert = true
+            }
+        }
+        else
+        {
+            db.insertarCuenta(data: cuenta.cuenta)
+            db.updateCuentaAgendada(collection: "cuentasAgendadas", uid: cuenta.uid, modify: ["nextPay":  fmt.string(from: cuenta.newDate())])
+        }
+        db.refreshCuentas()
     }
+    
+    
+    
+    
     
 }

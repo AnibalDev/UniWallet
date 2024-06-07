@@ -7,17 +7,16 @@
 
 import SwiftUI
 
-struct CustomTextField: View {
+struct EmailTextField: View {
     
     @Binding var value: String
-    let text: String
     
     var body: some View {
-        TextField(text: $value) {
-            Label(text, systemImage: "")
-        }
+        TextField("Email",text: $value)
+        .foregroundStyle(.black)
         .textInputAutocapitalization(.never)
         .padding()
+        .keyboardType(.emailAddress)
         .background(
             RoundedRectangle(cornerRadius: 12)
                 .fill(Color.white)
@@ -30,3 +29,6 @@ struct CustomTextField: View {
     }
 }
 
+#Preview {
+    EmailTextField(value: .constant(""))
+}

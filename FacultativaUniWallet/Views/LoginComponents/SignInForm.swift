@@ -11,37 +11,58 @@ struct SignInForm: View {
     @State var email = ""
     @State var password = ""
     
-    var buttonCallback: (String, String) -> Void
+    @State private var showingAlert = false
+    @EnvironmentObject var vm: LoginViewModel
+    @State var errorMessage = ""
+    
+    var newAccountCallback: () -> Void
+    var forgetCallback: () -> Void
+    
+    func signIn() {
+        Task {
+            do {
+                try await vm.signIn(email: email, password: password)
+            }
+            catch {
+                print("Error: \(error)")
+                errorMessage = error.localizedDescription
+                showingAlert.toggle()
+            }
+        }
+    }
     
     var body: some View {
         VStack {
             Text("Ingresar sesión")
                 .font(.title)
-            //                .padding([.top], 10)
                 .padding(5)
             Text("Usuario")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .font(.callout)
-            CustomTextField(value: $email, text: "Email")
+            EmailTextField(value: $email)
+                .accessibilityIdentifier("email")
             Text("Contraseña")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .font(.callout)
-            CustomSecureField(value: $password, label: "Contraseña")
-            
-            CustomButtonFill(buttonCallback: { buttonCallback(email, password)}, text: "Ingresar sesión", width: screenWidth - 50)
-            
+            PasswordTextField(text: $password, title: "8 o mas caracteres")
+            Text("Contraseña")
+            CustomButtonFill(buttonCallback: signIn, text: "Ingresar sesión", width: screenWidth - 50)
+                .accessibilityIdentifier("signIn")
                 .padding(8)
             Button("Olvidaste tu contraseña?") {
-                
+                forgetCallback()
             }
             .foregroundStyle(.pink)
             HStack {
                 Text("No tienes una cuenta?")
                 Button("Crea una") {
-//                    buttonCallback()
+                    newAccountCallback()
                 }
                 .foregroundStyle(.pink)
             }
+        }
+        .alert(isPresented: $showingAlert) {
+            Alert(title: Text("Error de credenciales"), message: Text(errorMessage), dismissButton: .default(Text("Ok")))
         }
         .padding()
         .background(
@@ -53,5 +74,5 @@ struct SignInForm: View {
 }
 
 //#Preview {
-//    ExistingAccountView(buttonCallback: {})
+//    SignInForm()
 //}
